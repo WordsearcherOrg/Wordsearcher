@@ -408,8 +408,8 @@ body {
   float: right;
   cursor: pointer;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 2.5vh;
+  top: 2.5vh;
 }
 
 #aboutClose:hover {
