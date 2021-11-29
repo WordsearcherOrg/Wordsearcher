@@ -394,6 +394,7 @@ body {
 #aboutTitle {
   font-size: 2em;
   font-weight: bold;
+  position: relative;
 }
 
 #aboutText {
