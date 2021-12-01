@@ -395,6 +395,7 @@ body {
   font-size: 2em;
   font-weight: bold;
   position: relative;
+  width:fit-content;
 }
 
 #aboutText {
@@ -410,6 +411,7 @@ body {
   position: absolute;
   right: 2.5vh;
   top: 2.5vh;
+  padding: 0;
 }
 
 #aboutClose:hover {
@@ -436,6 +438,8 @@ body {
   cursor: pointer;
   display: none;
   z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 #toTop::before,
@@ -480,7 +484,7 @@ body {
 #aboutLinks {
   list-style: none;
   display: inline;
-  padding-left: 0; 
+  padding-left: 0;
 }
 #aboutLinks li {
   display: inline;
@@ -496,8 +500,10 @@ body {
   color: var(--main-color);
   font-size: 1.1em;
   position: relative;
+
 }
 
+@media (max-resolution: 1dppx) {
 #aboutLinks li a::before,
 #aboutLinks li a::after {
   --scale: 0;
@@ -536,7 +542,7 @@ body {
     border-top-color: var(--toooltip-color);
     margin-top: 8px;
 }
-
+}
 #footerDatamuse {
   text-align: center;
   margin-top: -50px;
