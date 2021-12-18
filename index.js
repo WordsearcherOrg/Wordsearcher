@@ -1,18 +1,19 @@
 window.onload = () => {
 const searchTypes = new Map([
   ["Describes", "rel_jjb"],
-  ["Means", "ml"],
+  ["Is Like", "ml"],
   ["Sounds Like", "sl"],
   ["Starts With", "sp"]
 
 ])
 const spacelessParam = new Map([
   ["Soundslike", "Sounds Like"],
-  ["Startswith", "Starts With"]
+  ["Startswith", "Starts With"],
+  ["Islike", "Is Like"]
 ])
 const placeholders = new Map([
   ["Describes", "any word"],
-  ["Means", "any word or phrase"],
+  ["Is Like", "any word or phrase"],
   ["Sounds Like", "anything"],
   ["Starts With", "anything"]
 ])
@@ -181,7 +182,7 @@ if (params.has("type")) {
   let query = fixQuery(params.get('type'), "type")
   if(searchTypes.has(query)) {
     document.getElementById("searchType").value = query
-    if(query == "Means") {
+    if(query == "Is Like") {
       document.getElementById("atopSearch").innerHTML = "Find a word that..."
     }
   } else {
@@ -293,7 +294,7 @@ var parts = []
   document.getElementById("searchType").onchange = (ev) => {
       changePlaceholder()
       fixWidth(ev.target.value)
-      if(ev.target.value == "Means") {
+      if(ev.target.value == "Is Like") {
         document.getElementById("atopSearch").innerHTML = "Find a word that..."
       } else {
         document.getElementById("atopSearch").innerHTML = "Find a word that..."
@@ -332,7 +333,7 @@ var parts = []
       let query = fixQuery(p.get('type'), "type")
       if(searchTypes.has(query)) {
         document.getElementById("searchType").value = query
-        if(query == "Means") {
+        if(query == "Is Like") {
           document.getElementById("atopSearch").innerHTML = "Find a word that..."
         }
       } else {
