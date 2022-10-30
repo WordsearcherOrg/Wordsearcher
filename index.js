@@ -236,7 +236,7 @@ var parts = []
     }
   }
   function fixWidth(value) {
-    let newWidth = getTextWidth(value, "bold 20px Inter") + 30
+    let newWidth = getTextWidth(value, "bold 20px Inter") + 20
       document.getElementById("searchType").style.width = newWidth
       document.getElementById("term").style.paddingLeft = newWidth + 21
   }
