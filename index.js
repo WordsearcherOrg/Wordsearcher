@@ -41,9 +41,9 @@ function search(status) {
 
 
   let key = searchTypes.get(type)
-  if(key != "sp") { url = `https://api.datamuse.com/words?${key}=${term}&md=r&ipa=1&p&max=1000` 
+  if(key != "sp") { url = `https://api.datamuse.com/words?${key}=${term}&md=r&ipa=1&p&max=50` 
 }
-  else { url = `https://api.datamuse.com/words?${key}=${term}*&md=r&ipa=1&p&max=1000`}
+  else { url = `https://api.datamuse.com/words?${key}=${term}*&md=r&ipa=1&p&max=50`}
   fetch(url)
   .then(response => response.json())
   .then(data => {
@@ -236,7 +236,7 @@ var parts = []
     }
   }
   function fixWidth(value) {
-    let newWidth = getTextWidth(value, "bold 20px Inter") + 20
+    let newWidth = getTextWidth(value, "bold 22px Inter") + 18
       document.getElementById("searchType").style.width = newWidth
       document.getElementById("term").style.paddingLeft = newWidth + 21
   }

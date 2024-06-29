@@ -504,7 +504,6 @@ body {
 
 }
 
-@media (max-resolution: 1dppx) {
 #aboutLinks li a::before,
 #aboutLinks li a::after {
   --scale: 0;
@@ -542,7 +541,6 @@ body {
     border: var(--arrow-size) solid transparent;
     border-top-color: var(--toooltip-color);
     margin-top: 8px;
-}
 }
 #footerDatamuse {
   text-align: center;
